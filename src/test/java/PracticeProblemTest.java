@@ -5,45 +5,272 @@ import java.io.*;
 public class PracticeProblemTest {
 
    @Test
-   public void testOutput()
-   {
-     PrintStream originalOut = System.out;
-     ByteArrayOutputStream bos = new ByteArrayOutputStream();
-     System.setOut(new PrintStream(bos));
+   @DisplayName("")
+   void findTest1() {
+      Class<?> testClass = PracticeProblem.class;
+      try {
+         Class[] cArg = { int.class, int[].class };
+         Method method = testClass.getDeclaredMethod("find", cArg);
+         // Enter code here
+         assertEquals(3, (int) method.invoke(null, new int[] { 0, 1, 2, 3 }, 3));
+      }
 
-     // action
-     PracticeProblem.q1();
-
-     // assertion
-     assertEquals("There once was a man from St. Ives.\n", bos.toString());
-
-     // undo the binding in System
-     System.setOut(originalOut);
+      catch (NoSuchMethodException e) {
+         fail("Method does not exist");
+      } catch (Exception e) {
+         fail("Something weird happened");
+      }
    }
 
    @Test
-   public void testInputandOutput()
-   {
-      String data = "Users Input";
-      System.setIn(new ByteArrayInputStream(data.getBytes()));
-      
-      PrintStream originalOut = System.out;
-      ByteArrayOutputStream bos = new ByteArrayOutputStream();
-      System.setOut(new PrintStream(bos));
+   @DisplayName("")
+   void findTest2() {
+      Class<?> testClass = PracticeProblem.class;
+      try {
+         Class[] cArg = { int.class, int[].class };
+         Method method = testClass.getDeclaredMethod("find", cArg);
+         // Enter code here
+         assertEquals(0, (int) method.invoke(null, new int[] { 0, 1, 2, 3 }, 0));
+      }
 
-      // action
-      PracticeProblem.q1();
-
-      // assertion
-      assertEquals("There once was a man from St. Ives.\n", bos.toString());
-
-      // undo the binding in System
-      System.setOut(originalOut);
+      catch (NoSuchMethodException e) {
+         fail("Method does not exist");
+      } catch (Exception e) {
+         fail("Something weird happened");
+      }
    }
 
    @Test
-   public void testQ3()
-   {
-     
+   @DisplayName("")
+   void findTest3() {
+      Class<?> testClass = PracticeProblem.class;
+      try {
+         Class[] cArg = { int.class, int[].class };
+         Method method = testClass.getDeclaredMethod("find", cArg);
+         // Enter code here
+         assertEquals(-1, (int) method.invoke(null, new int[] { 0, 1, 2, 3 }, 10));
+      }
+
+      catch (NoSuchMethodException e) {
+         fail("Method does not exist");
+      } catch (Exception e) {
+         fail("Something weird happened");
+      }
+   }
+
+   @Test
+   @DisplayName("")
+   void findTest4() {
+      Class<?> testClass = PracticeProblem.class;
+      try {
+         Class[] cArg = { int.class, int[].class };
+         Method method = testClass.getDeclaredMethod("find", cArg);
+         // Enter code here
+         assertEquals(-1, (int) method.invoke(null, new int[] {}, 3));
+      }
+
+      catch (NoSuchMethodException e) {
+         fail("Method does not exist");
+      } catch (Exception e) {
+         fail("Something weird happened");
+      }
+   }
+
+   @Test
+   @DisplayName("")
+   void findTest5() {
+      Class<?> testClass = PracticeProblem.class;
+      try {
+         Class[] cArg = { int.class, int[].class };
+         Method method = testClass.getDeclaredMethod("find", cArg);
+         // Enter code here
+         assertEquals(0, (int) method.invoke(null, new int[] { 3, 3, 3, 3 }, 3));
+      }
+
+      catch (NoSuchMethodException e) {
+         fail("Method does not exist");
+      } catch (Exception e) {
+         fail("Something weird happened");
+      }
+   }
+
+   @Test
+   @DisplayName("")
+   void findLastTest1() {
+      Class<?> testClass = PracticeProblem.class;
+      try {
+         Class[] cArg = { String.class, String[].class };
+         Method method = testClass.getDeclaredMethod("findLast", cArg);
+         // Enter code here
+         assertEquals(3, (String) method.invoke(null, new String[] { "0", "1", "2", "3" }, "3"));
+      }
+
+      catch (NoSuchMethodException e) {
+         fail("Method does not exist");
+      } catch (Exception e) {
+         fail("Something weird happened");
+      }
+   }
+
+   @Test
+   @DisplayName("")
+   void findLastTest2() {
+      Class<?> testClass = PracticeProblem.class;
+      try {
+         Class[] cArg = { String.class, String[].class };
+         Method method = testClass.getDeclaredMethod("findLast", cArg);
+         // Enter code here
+         assertEquals(0, (String) method.invoke(null, new String[] { "0", "1", "2", "3" }, "0"));
+      }
+
+      catch (NoSuchMethodException e) {
+         fail("Method does not exist");
+      } catch (Exception e) {
+         fail("Something weird happened");
+      }
+   }
+
+   @Test
+   @DisplayName("")
+   void findLastTest3() {
+      Class<?> testClass = PracticeProblem.class;
+      try {
+         Class[] cArg = { String.class, String[].class };
+         Method method = testClass.getDeclaredMethod("findLast", cArg);
+         // Enter code here
+         assertEquals(-1, (String) method.invoke(null, new String[] { "0", "1", "2", "3" }, "adjfkls"));
+      }
+
+      catch (NoSuchMethodException e) {
+         fail("Method does not exist");
+      } catch (Exception e) {
+         fail("Something weird happened");
+      }
+   }
+
+   @Test
+   @DisplayName("")
+   void findLastTest4() {
+      Class<?> testClass = PracticeProblem.class;
+      try {
+         Class[] cArg = { String.class, String[].class };
+         Method method = testClass.getDeclaredMethod("findLast", cArg);
+         // Enter code here
+         assertEquals(-1, (String) method.invoke(null, new String[] {}, "Help"));
+      }
+
+      catch (NoSuchMethodException e) {
+         fail("Method does not exist");
+      } catch (Exception e) {
+         fail("Something weird happened");
+      }
+   }
+
+   @Test
+   @DisplayName("")
+   void findLastTest5() {
+      Class<?> testClass = PracticeProblem.class;
+      try {
+         Class[] cArg = { String.class, String[].class };
+         Method method = testClass.getDeclaredMethod("findLast", cArg);
+         // Enter code here
+         assertEquals(3, (String) method.invoke(null, new String[] { "3", "3", "3", "3" }, "3"));
+      }
+
+      catch (NoSuchMethodException e) {
+         fail("Method does not exist");
+      } catch (Exception e) {
+         fail("Something weird happened");
+      }
+   }
+
+   @Test
+   @DisplayName("")
+   void findSecondTest1() {
+      Class<?> testClass = PracticeProblem.class;
+      try {
+         Class[] cArg = { char.class, char[].class };
+         Method method = testClass.getDeclaredMethod("findSecond", cArg);
+         // Enter code here
+         assertEquals(3, (String) method.invoke(null, new char[] { '0', '1', '2', '3' }, '3'));
+      }
+
+      catch (NoSuchMethodException e) {
+         fail("Method does not exist");
+      } catch (Exception e) {
+         fail("Something weird happened");
+      }
+   }
+
+   @Test
+   @DisplayName("")
+   void findSecondTest2() {
+      Class<?> testClass = PracticeProblem.class;
+      try {
+         Class[] cArg = { char.class, char[].class };
+         Method method = testClass.getDeclaredMethod("findSecond", cArg);
+         // Enter code here
+         assertEquals(2, (String) method.invoke(null, new char[] { '0', '2', '2', '3' }, '2'));
+      }
+
+      catch (NoSuchMethodException e) {
+         fail("Method does not exist");
+      } catch (Exception e) {
+         fail("Something weird happened");
+      }
+   }
+
+   @Test
+   @DisplayName("")
+   void findSecondTest3() {
+      Class<?> testClass = PracticeProblem.class;
+      try {
+         Class[] cArg = { char.class, char[].class };
+         Method method = testClass.getDeclaredMethod("findSecond", cArg);
+         // Enter code here
+         assertEquals(-1, (String) method.invoke(null, new char[] { '0', '1', '2', '3' }, 'a'));
+      }
+
+      catch (NoSuchMethodException e) {
+         fail("Method does not exist");
+      } catch (Exception e) {
+         fail("Something weird happened");
+      }
+   }
+
+   @Test
+   @DisplayName("")
+   void findSecondTest4() {
+      Class<?> testClass = PracticeProblem.class;
+      try {
+         Class[] cArg = { char.class, char[].class };
+         Method method = testClass.getDeclaredMethod("findSecond", cArg);
+         // Enter code here
+         assertEquals(-1, (String) method.invoke(null, new char[] {}, '3'));
+      }
+
+      catch (NoSuchMethodException e) {
+         fail("Method does not exist");
+      } catch (Exception e) {
+         fail("Something weird happened");
+      }
+   }
+
+   @Test
+   @DisplayName("")
+   void findSecondTest5() {
+      Class<?> testClass = PracticeProblem.class;
+      try {
+         Class[] cArg = { char.class, char[].class };
+         Method method = testClass.getDeclaredMethod("findSecond", cArg);
+         // Enter code here
+         assertEquals(1, (String) method.invoke(null, new char[] { '3', '3', '3', '3' }, '3'));
+      }
+
+      catch (NoSuchMethodException e) {
+         fail("Method does not exist");
+      } catch (Exception e) {
+         fail("Something weird happened");
+      }
    }
 }
